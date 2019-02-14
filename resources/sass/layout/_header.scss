@@ -1,14 +1,28 @@
 @import '../base/variables';
 
 .nav-wrapper {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: block;
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
 }
 
-#header {
+.is-open {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.header {
   width: 100%;
   color: $body-black;
   background-color: $white;
   z-index: 9999;
+
   #header-brand {
     color: inherit;
   }
@@ -17,6 +31,14 @@
 #menu {
   background-color: $white;
   z-index: 9998;
+  display: none;
+  height: 100vh;
+  width: 100%;
+}
+
+#search-wrapper {
+  background-color: $white;
+  z-index: 9999;
   display: none;
   height: 100vh;
   width: 100%;
