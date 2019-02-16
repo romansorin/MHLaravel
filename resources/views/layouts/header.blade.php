@@ -11,26 +11,35 @@
             <a class="nav-link" href="/about">About</a>
         </div>
     </nav>
+    <div class="menu-footer">
+        <div class="flex-row justify-content-start" id="menu-footer-row">
+            <a>Hello</a>
+            <a>Hello</a>
+            <a>Hello</a>
+            <a>Hello</a>
+        </div>
+    </div>
 </div>
 
 <div id="search-wrapper">
-    <div class="container center">
+    <div class="close-search"><button class="btn btn-light">Close</button></div>
+    <div class="container search-container">
         <div class="row">
             <div class="col-lg-12">
+                <p class="search-date-label">Sunday, November 4th</p>
                 <form id="search-form" role="search" action="#">
-                    <input name="search" class="search-input" placeholder="Type to search" autocomplete="off"
-                           type="text">
+                    <input name="search" class="search-input" placeholder="Type to search" autocomplete="off" type="text">
                 </form>
             </div>
         </div>
     </div>
-    <!--<div class="container">
+    <div class="container search-results-container">
         <div class="row">
-            <div class="col-lg-12">
-
+            <div class="col-lg-12 error-search-container">
+                <p class="error-search">Nothing found. Try using different keywords.</p>
             </div>
         </div>
-    </div>-->
+    </div>
 </div>
 
 <div class="base">
@@ -63,6 +72,9 @@
     search_toggle.addEventListener('click', e => {
         nav.classList.toggle('is-open');
         search.style.display === '' ? search.style.display = 'block' : '';
-        search.classList.toggle('active');
+    });
+
+    document.querySelector('.close-search').addEventListener('click', e => {
+        search.style.display = '';
     });
 </script>
