@@ -1,14 +1,3 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700');
-
-// Variables
-@import 'base/variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-@import 'vendors/open-iconic-bootstrap';
-@import '~hamburgers/_sass/hamburgers/hamburgers';
-
-@import 'layout/header';
+@import 'base/module';
+@import 'layout/module';
+@import 'vendors/module';
