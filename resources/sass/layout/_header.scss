@@ -18,7 +18,6 @@ $theme-color: #4c32ff;
     display: none;
     height: 100vh;
     width: 100%;
-
     #menu-box {
       position: relative;
       top: 150px;
@@ -30,9 +29,13 @@ $theme-color: #4c32ff;
     }
 
     a {
+      transition: color 0.2s ease-out;
       font-size: 2.3em;
       @media screen and (min-width: 320px) and (max-width: 414px) {
         font-size: 1.9em;
+      }
+      &:hover {
+        color: $red-color-possible2;
       }
       font-weight: 600;
       color: $body-black;

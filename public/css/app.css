@@ -3683,6 +3683,7 @@
 }
 
 .nav-wrapper #menu a {
+  transition: color 0.2s ease-out;
   font-size: 2.3em;
   font-weight: 600;
   color: #3a3a3a;
@@ -3692,6 +3693,10 @@
   .nav-wrapper #menu a {
     font-size: 1.9em;
   }
+}
+
+.nav-wrapper #menu a:hover {
+  color: #EB423D;
 }
 
 .is-open {
@@ -3819,8 +3824,8 @@
 
 #search-wrapper .close-search {
   float: right;
-  padding-top: 40px;
-  padding-right: 40px;
+  padding-top: 20px;
+  padding-right: 30px;
   transition-property: opacity;
   transition-duration: 0.15s;
   transition-timing-function: linear;
@@ -3865,7 +3870,7 @@
   width: 100%;
   line-height: 78px;
   background: none;
-  border-left: solid 1px #4c32ff;
+  border-left: solid 1px #EB423D;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -3873,7 +3878,7 @@
     font-size: 34px;
     height: 50px;
     line-height: 50px;
-    border-left: solid 1px #4c32ff;
+    border-left: solid 1px #EB423D;
     border-radius: 0px;
     position: relative;
   }
@@ -15838,5 +15843,66 @@ a.text-dark:focus {
   bottom: 0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.card-vertical,
+.card-horizontal {
+  margin: 15px 15px 15px 15px;
+  border-radius: 18px;
+  color: white;
+  background-color: black;
+  box-shadow: 6px 10px 35px -12px rgba(0, 0, 0, 0.2);
+}
+
+.card-horizontal {
+  width: 530px;
+  height: 280px;
+}
+
+.card-vertical {
+  width: 250px;
+  height: 380px;
+}
+
+#one {
+  background-color: #FAACA8;
+  background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+}
+
+#two {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+#three {
+  background: #b993d6;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b993d6, #8ca6db);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#four {
+  background: #870000;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #190A05, #870000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#five {
+  background: #f2709c;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9472, #f2709c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#six {
+  background: #E6DADA;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #274046, #E6DADA);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 

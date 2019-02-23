@@ -1,9 +1,9 @@
-const menuToggleBtn = document.querySelector('#menu-toggle');
-const openSearchBtn = document.querySelector('.open-search');
-const nav = document.querySelector('.nav-wrapper');
-const menu = document.getElementById('menu');
-const search = document.getElementById('search-wrapper');
-const closeSearchBtn = document.querySelector('.close-search');
+let menuToggleBtn = document.querySelector('#menu-toggle');
+let openSearchBtn = document.querySelector('.open-search');
+let nav = document.querySelector('.nav-wrapper');
+let menu = document.getElementById('menu');
+let search = document.getElementById('search-wrapper');
+let closeSearchBtn = document.querySelector('.close-search');
 
 let nav_array = Array.from(document.querySelectorAll(".nav-link"));
 let delays = ['first', 'second', 'third', 'fourth', 'fifth'];
@@ -14,11 +14,13 @@ function assignNavLinkDelays() {
 }
 
 function replaceInToOut(element) {
-    element.classList.replace('fadeIn', 'fadeOut');
+    element.classList.remove('fadeIn');
+    element.classList.add('fadeOut');
 }
 
 function replaceOutToIn(element) {
-    element.classList.replace('fadeOut', 'fadeIn');
+    element.classList.remove('fadeOut');
+    element.classList.add('fadeIn');
 }
 
 function addAnimation(element, anim) {
@@ -37,17 +39,17 @@ function menuToggle() {
     menu.classList.toggle('active');
 }
 
-function isMenuOpen() {
+function menuIsOpen() {
     return menuToggleBtn.classList.contains('is-active');
 }
 
-function doesElementContainAnimated(element) {
+function elementContainsAnimated(element) {
     return element.classList.contains('animated');
 }
 
 menuToggleBtn.addEventListener('click', () => {
-    if (isMenuOpen()) {
-        if (doesElementContainAnimated(menu)) {
+    if (menuIsOpen()) {
+        if (elementContainsAnimated(menu)) {
             replaceInToOut(menu);
             menuButtonToggle();
             setTimeout(() => {
@@ -56,7 +58,7 @@ menuToggleBtn.addEventListener('click', () => {
             }, 500);
         }
     } else {
-        if (doesElementContainAnimated(menu)) {
+        if (elementContainsAnimated(menu)) {
             replaceOutToIn(menu);
         } else {
             addAnimation(menu, 'fadeIn');
@@ -72,7 +74,7 @@ menuToggleBtn.addEventListener('click', () => {
 openSearchBtn.addEventListener('click', () => {
     if (!nav.classList.contains('is-active')) /* I have zero idea why this solves the issue of the menu not opening after the search wrapper is open, but it does. Don't touch or question it. */
         navToggle();
-    if (doesElementContainAnimated(search))
+    if (elementContainsAnimated(search))
         replaceOutToIn(search);
     else
         addAnimation(search, 'fadeIn');
