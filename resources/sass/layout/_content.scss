@@ -1,0 +1,51 @@
+@import '../base/module';
+
+.page-wrap {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: $body-black;
+
+  .page-heading {
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  .page-subheading {
+    color: #6f6f6f;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.main-content-wrap {
+
+  #news-cards-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .col-6 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .col-12 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .glider-contain {
+      .col-12 {
+        flex: 0 0 95%;
+      }
+      .glider-track {
+        width: 100% !important;
+      }
+    }
+
+  }
+}
