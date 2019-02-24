@@ -1,4 +1,6 @@
-@import '../base/variables';
+@import '../base/module';
+
+$theme-color: #4c32ff;
 
 .nav-wrapper {
   position: fixed;
@@ -10,6 +12,36 @@
   display: block;
   transform: translate3d(0, -100%, 0);
   opacity: 0;
+  #menu {
+    background-color: $white;
+    z-index: 9998;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    #menu-box {
+      position: relative;
+      top: 150px;
+      padding: 0 0 0 40px;
+      max-width: 400px;
+      @media screen and (min-width: 320px) and (max-width: 414px) {
+        padding: 0 0 0 8px;
+      }
+    }
+
+    a {
+      transition: color 0.2s ease-out;
+      font-size: 2.3em;
+      @media screen and (min-width: 320px) and (max-width: 414px) {
+        font-size: 1.9em;
+      }
+      &:hover {
+        color: $red-color-possible2;
+      }
+      font-weight: 600;
+      color: $body-black;
+    }
+  }
+
 }
 
 .is-open {
@@ -17,29 +49,93 @@
   transform: translate3d(0, 0, 0);
 }
 
+.active {
+  display: flex !important;
+  align-items: flex-start;
+}
+
+.hamburger-box {
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
 .header {
+  .open-search {
+    height: 25px;
+    width: 25px;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active, &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    padding: 0;
+
+    img {
+      &:active, &:focus {
+        outline: none;
+      }
+
+      transform: scale(1.25);
+    }
+  }
   width: 100%;
   color: $body-black;
   background-color: $white;
   z-index: 9999;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100%;
+  #menu-toggle {
+    height: 100%;
+    @media screen and (min-width: 320px) and (max-width: 1024px) {
+      padding-bottom: 0px;
+      padding-top: 7.5px;
+    }
+  }
+  .header-btn {
+    outline: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
 
   #header-brand {
-    color: inherit;
+    margin-right: 0px;
+    padding: 0;
+
+    img {
+      height: 70px;
+      @media screen and (min-width: 320px) and (max-width: 1024px) {
+        height: 50px;
+      }
+    }
   }
-}
 
-#menu {
-  background-color: $white;
-  z-index: 9998;
-  display: none;
-  height: 100vh;
-  width: 100%;
-}
-
-#search-wrapper {
-  background-color: $white;
-  z-index: 9999;
-  display: none;
-  height: 100vh;
-  width: 100%;
+  .container-fluid {
+    margin-left: 15px;
+    margin-right: 15px;
+    @media screen and (min-width: 320px) and (max-width: 414px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }

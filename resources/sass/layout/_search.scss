@@ -1,0 +1,108 @@
+@import '../base/module';
+
+#search-wrapper {
+  background-color: $white;
+  z-index: 10000;
+  opacity: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  .close-search {
+    float: right;
+    padding-top: 20px;
+    padding-right: 30px;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+
+    .btn {
+      outline: none;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &:active {
+        outline: none;
+      }
+    }
+
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      padding-top: 10px;
+      padding-right: 10px;
+    }
+
+    .close-search-svg {
+      height: 35px;
+    }
+  }
+  .search-input {
+    border: none;
+    font-size: 62px;
+    font-family: $font-family-sans-serif;
+    color: $body-black;
+    padding-left: 20px;
+    height: 78px;
+    font-weight: 400;
+    width: 100%;
+    line-height: 78px;
+    background: none;
+    border-left: solid 1px $red-color-possible2; // TODO: change this to a theme color.
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      font-size: 34px;
+      height: 50px;
+      line-height: 50px;
+      border-left: solid 1px $red-color-possible2; // TODO: change this to a theme color.
+      border-radius: 0px;
+      position: relative;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+    }
+
+    ::placeholder {
+      color: $body-black;
+    }
+  }
+
+  .search-container {
+    padding-top: 205px;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      padding-top: 100px;
+    }
+    .search-date-label {
+      cursor: default;
+      color: hsl(0, 0%, 29%);
+    }
+    #search-form {
+      margin-bottom: 20px;
+    }
+  }
+
+  .error-search {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 52px;
+    font-weight: 600;
+    color: $body-black;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+}
