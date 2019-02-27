@@ -3986,6 +3986,42 @@
   width: 100% !important;
 }
 
+.main-content-wrap #calendar-cards-wrapper {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main-content-wrap #calendar-cards-wrapper .glider-contain .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main-content-wrap #calendar-cards-wrapper .glider-contain .col-12 {
+  flex: 0 0 40%;
+}
+
+@media (min-width: 1200px) {
+  .main-content-wrap #calendar-cards-wrapper .glider-contain .glider-track {
+    -webkit-transform: translateX(700px);
+            transform: translateX(700px);
+  }
+}
+
+.main-content-wrap #calendar-cards-wrapper .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main-content-wrap #calendar-cards-wrapper .col-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main-content-wrap #calendar-cards-wrapper .col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /*!
  * Bootstrap v4.3.0 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -27782,6 +27818,7 @@ a.text-dark:focus {
           transform: rotate(-90deg);
 }
 
+.card-calendar,
 .card-vertical,
 .card-horizontal {
   margin: 15px 15px 15px 0;
@@ -27793,12 +27830,15 @@ a.text-dark:focus {
 }
 
 @media (max-width: 1199.98px) {
+  .card-calendar,
   .card-vertical,
   .card-horizontal {
     width: auto !important;
+    height: 380px !important;
   }
 }
 
+.card-calendar .card-calendar-info .card-calendar-title,
 .card-vertical .card-vertical-meta .card-vertical-title,
 .card-horizontal .card-horizontal-meta .card-horizontal-title {
   letter-spacing: 0;
@@ -27849,6 +27889,47 @@ a.text-dark:focus {
 
 .card-vertical .card-vertical-view .card-vertical-view-btn {
   padding: 5px 30px 5px 30px;
+}
+
+.card-calendar {
+  flex-direction: column;
+  border-radius: 10px;
+  color: #222222;
+  width: 400px;
+  height: 500px;
+}
+
+.card-calendar .card-calendar-date {
+  margin-bottom: 40px;
+  width: 40px;
+  flex-direction: column;
+  border-bottom: 2px solid;
+}
+
+.card-calendar .card-calendar-date .card-calendar-day {
+  margin-bottom: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.card-calendar .card-calendar-date .card-calendar-month {
+  margin-bottom: 10;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.card-calendar .card-calendar-info {
+  flex-direction: column;
+}
+
+.card-calendar .card-calendar-info .card-calendar-title {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.card-calendar .card-calendar-info .card-calendar-description {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 #one {

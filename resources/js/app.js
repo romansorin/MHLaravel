@@ -19,8 +19,9 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('card-horizontal', require('./components/CardHorizontal.vue').default);
+Vue.component('card-horizontal', require('./components/CardHorizontal').default);
 Vue.component('card-vertical', require('./components/CardVertical').default);
+Vue.component('card-calendar', require('./components/CalendarCard').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,5 +30,5 @@ Vue.component('card-vertical', require('./components/CardVertical').default);
  */
 
 const app = new Vue({
-    el: '#news-cards-wrapper'
+    el: '#app'
 });

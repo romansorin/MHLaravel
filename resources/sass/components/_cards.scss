@@ -11,6 +11,7 @@
   @include box-shadow(2px 4px 8px 0 rgba(0, 0, 0, 0.2));
   @include media-breakpoint-down(lg) {
     width: auto !important;
+    height: 380px !important;
   }
 }
 
@@ -28,6 +29,7 @@
   @include box-shadow(0 0 20px -3px rgba(0, 0, 0, 0.25));
   border-color: $white;
   background-color: $white;
+  // TODO: create hover, active, focus, etc. styles
 }
 
 %card-meta {
@@ -94,6 +96,47 @@
     .card-vertical-view-btn {
       @extend %card-view-btn;
       padding: 5px 30px 5px 30px;
+    }
+  }
+}
+
+.card-calendar {
+  @extend %card;
+  flex-direction: column;
+  border-radius: 10px;
+  color: #222222;
+  width: 400px;
+  height: 500px;
+
+  .card-calendar-date {
+    margin-bottom: 40px;
+    width: 40px;
+    flex-direction: column;
+    border-bottom: 2px solid;
+    .card-calendar-day {
+      margin-bottom: 0;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .card-calendar-month {
+      margin-bottom: 10;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+
+  .card-calendar-info {
+    flex-direction: column;
+    .card-calendar-title {
+      @extend %card-title;
+      font-weight: 600;
+      font-size: 28px;
+    }
+
+    .card-calendar-description {
+      font-size: 24px;
+      font-weight: 400;
     }
   }
 }

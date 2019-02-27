@@ -42,10 +42,67 @@
       .col-12 {
         flex: 0 0 95%;
       }
+
       .glider-track {
         width: 100% !important;
       }
     }
 
+  }
+
+  #calendar-cards-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+
+    .glider-contain {
+      .col {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .col-12 {
+        flex: 0 0 40%;
+      }
+
+      .glider-track {
+
+        //@media (min-width: 576px) {
+        //  .container {
+        //    max-width: 540px;
+        //  }
+        //}
+        //
+        //@media (min-width: 768px) {
+        //  .container {
+        //    max-width: 720px;
+        //  }
+        //}
+        //
+        //@media (min-width: 992px) {
+        //  .container {
+        //    max-width: 960px;
+        //  }
+        //}
+
+        @media (min-width: 1200px) {
+          transform: translateX(700px);
+        }
+      }
+    }
+
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .col-6 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .col-12 {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

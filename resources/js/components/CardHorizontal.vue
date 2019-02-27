@@ -1,6 +1,6 @@
 <template>
     <div class="col-12">
-        <article class="card-horizontal d-none d-lg-block" id="one">
+        <article class="card-horizontal" id="one">
             <div class="container">
                 <div class="row card-horizontal-meta">
                         <p class="card-horizontal-category">{{ data[0].category }}</p>

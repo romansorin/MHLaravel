@@ -1754,6 +1754,49 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CalendarCard.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CalendarCard.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _data = [{
+  date: 24,
+  month: 'January',
+  title: "Title",
+  description: "Info"
+}];
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "CalendarCard",
+  data: function data() {
+    return {
+      data: _data
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CardHorizontal.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CardHorizontal.vue?vue&type=script&lang=js& ***!
@@ -36714,6 +36757,54 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CalendarCard.vue?vue&type=template&id=26ef2859&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CalendarCard.vue?vue&type=template&id=26ef2859& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "col-3" }, [
+    _c("article", { staticClass: "card-calendar", attrs: { id: "one" } }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row card-calendar-date" }, [
+          _c("p", { staticClass: "card-calendar-day" }, [
+            _vm._v(_vm._s(_vm.data[0].date))
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-calendar-month" }, [
+            _vm._v(_vm._s(_vm.data[0].month))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row card-calendar-info" }, [
+          _c("h3", { staticClass: "card-calendar-title" }, [
+            _vm._v(_vm._s(_vm.data[0].title))
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-calendar-description" }, [
+            _vm._v(_vm._s(_vm.data[0].description))
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CardHorizontal.vue?vue&type=template&id=98e81f02&":
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CardHorizontal.vue?vue&type=template&id=98e81f02& ***!
@@ -36730,28 +36821,21 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "col-12" }, [
-    _c(
-      "article",
-      {
-        staticClass: "card-horizontal d-none d-lg-block",
-        attrs: { id: "one" }
-      },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row card-horizontal-meta" }, [
-            _c("p", { staticClass: "card-horizontal-category" }, [
-              _vm._v(_vm._s(_vm.data[0].category))
-            ]),
-            _vm._v(" "),
-            _c("h3", { staticClass: "card-horizontal-title" }, [
-              _vm._v(_vm._s(_vm.data[0].title))
-            ])
+    _c("article", { staticClass: "card-horizontal", attrs: { id: "one" } }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row card-horizontal-meta" }, [
+          _c("p", { staticClass: "card-horizontal-category" }, [
+            _vm._v(_vm._s(_vm.data[0].category))
           ]),
           _vm._v(" "),
-          _vm._m(0)
-        ])
-      ]
-    )
+          _c("h3", { staticClass: "card-horizontal-title" }, [
+            _vm._v(_vm._s(_vm.data[0].title))
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(0)
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -48905,8 +48989,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('card-horizontal', __webpack_require__(/*! ./components/CardHorizontal.vue */ "./resources/js/components/CardHorizontal.vue").default);
+Vue.component('card-horizontal', __webpack_require__(/*! ./components/CardHorizontal */ "./resources/js/components/CardHorizontal.vue").default);
 Vue.component('card-vertical', __webpack_require__(/*! ./components/CardVertical */ "./resources/js/components/CardVertical.vue").default);
+Vue.component('card-calendar', __webpack_require__(/*! ./components/CalendarCard */ "./resources/js/components/CalendarCard.vue").default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -48914,7 +48999,7 @@ Vue.component('card-vertical', __webpack_require__(/*! ./components/CardVertical
  */
 
 var app = new Vue({
-  el: '#news-cards-wrapper'
+  el: '#app'
 });
 
 /***/ }),
@@ -48974,6 +49059,75 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/CalendarCard.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/components/CalendarCard.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CalendarCard_vue_vue_type_template_id_26ef2859___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CalendarCard.vue?vue&type=template&id=26ef2859& */ "./resources/js/components/CalendarCard.vue?vue&type=template&id=26ef2859&");
+/* harmony import */ var _CalendarCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CalendarCard.vue?vue&type=script&lang=js& */ "./resources/js/components/CalendarCard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CalendarCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CalendarCard_vue_vue_type_template_id_26ef2859___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CalendarCard_vue_vue_type_template_id_26ef2859___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/CalendarCard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/CalendarCard.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/CalendarCard.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CalendarCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CalendarCard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CalendarCard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CalendarCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/CalendarCard.vue?vue&type=template&id=26ef2859&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/CalendarCard.vue?vue&type=template&id=26ef2859& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CalendarCard_vue_vue_type_template_id_26ef2859___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CalendarCard.vue?vue&type=template&id=26ef2859& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CalendarCard.vue?vue&type=template&id=26ef2859&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CalendarCard_vue_vue_type_template_id_26ef2859___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CalendarCard_vue_vue_type_template_id_26ef2859___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
