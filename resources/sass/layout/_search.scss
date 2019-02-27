@@ -1,4 +1,5 @@
 @import '../base/module';
+@import '../utils/module';
 
 #search-wrapper {
   background-color: $white;
@@ -38,7 +39,7 @@
       opacity: 0.7;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 768px) {
+    @include breakpoint-custom-down(768px) {
       padding-top: 10px;
       padding-right: 10px;
     }
@@ -59,12 +60,12 @@
     line-height: 78px;
     background: none;
     border-left: solid 1px $red-color-possible2; // TODO: change this to a theme color.
-    @media screen and (min-width: 320px) and (max-width: 768px) {
+    @include breakpoint-custom-down(768px) {
       font-size: 34px;
       height: 50px;
       line-height: 50px;
       border-left: solid 1px $red-color-possible2; // TODO: change this to a theme color.
-      border-radius: 0px;
+      border-radius: 0;
       position: relative;
     }
 
@@ -83,7 +84,7 @@
 
   .search-container {
     padding-top: 205px;
-    @media screen and (min-width: 320px) and (max-width: 768px) {
+    @include breakpoint-custom-down(768px) {
       padding-top: 100px;
     }
     .search-date-label {
@@ -101,7 +102,7 @@
     font-size: 52px;
     font-weight: 600;
     color: $body-black;
-    @media screen and (min-width: 320px) and (max-width: 768px) {
+    @include breakpoint-custom-down(768px) {
       font-size: 40px;
     }
   }

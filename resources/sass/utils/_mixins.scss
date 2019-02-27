@@ -1,0 +1,15 @@
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin text-shadow($shadow...) {
+  text-shadow: $shadow;
+}
+
+@mixin breakpoint-custom-down($value) {
+  @media screen and (max-width: $value) {
+    @content
+  }
+}
