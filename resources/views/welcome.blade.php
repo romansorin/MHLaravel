@@ -1,13 +1,21 @@
 @extends('layouts/app')
+@section('title', 'Home')
 @section('stylesheets')
     <link rel="stylesheet" href="{{ asset('css/glider.min.css') }}">
 @endsection
 @section('content')
 
     <section class="page-wrap container">
-        <div>
-            <h1 class="page-heading">News.</h1>
-            <p class="page-subheading">The latest news and announcements from Mentor.</p>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-10">
+                    <h1 class="page-heading">News.</h1>
+                    <p class="page-subheading">The latest news and announcements from Mentor.</p>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-light page-subheading-extend">View latest</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -63,27 +71,11 @@
                 <div class="row">
                     <div class="glider-contain">
                         <div class="glider" id="calendar-glider">
-
-                                {{--TODO: move this into the component--}}
-
-                                    <card-calendar></card-calendar>
-
-                                    <card-calendar></card-calendar>
-
-                                    <card-calendar></card-calendar>
-
-                                    <card-calendar></card-calendar>
-
-                                    <card-calendar></card-calendar>
-
-                                    <card-calendar></card-calendar>
-
-                                    <card-calendar></card-calendar>
-
-
+                            {{--TODO: move this into the component--}}
+                            <card-calendar></card-calendar>
                         </div>
-                        <div role="tablist" class="dots"></div>
                     </div>
+                    <div role="tablist" class="dots"></div>
                 </div>
             </div>
         </div>
@@ -101,9 +93,10 @@
             draggable: true,
         });
         new Glider(document.querySelector('#calendar-glider'), {
-            slidesToScroll: 'auto',
-            slidesToShow: 'auto',
+            slidesToScroll: 3,
+            slidesToShow: 3,
             dragVelocity: 1.5,
+            addTrack: false,
             duration: 2,
             draggable: true,
             dots: '.dots',

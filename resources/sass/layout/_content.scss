@@ -1,9 +1,19 @@
 @import '../base/module';
 
+$grey: #6f6f6f;
+
 .page-wrap {
   margin-top: 50px;
   margin-bottom: 30px;
   color: $body-black;
+  .col-10 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .col-2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .page-heading {
     font-weight: 700;
@@ -11,9 +21,21 @@
   }
 
   .page-subheading {
-    color: #6f6f6f;
+    color: $grey;
     font-weight: 400;
     font-size: 16px;
+  }
+  .page-subheading-extend {
+    display: none;
+    background-color: transparent;
+    border: solid 1px $body-black;
+    border-radius: 14px;
+    padding: 5px 15px 5px 15px;
+    font-size: 16px;
+    &:hover {
+      background-color: $body-black;
+      color: $white;
+    }
   }
 }
 
@@ -83,9 +105,9 @@
         //  }
         //}
 
-        @media (min-width: 1200px) {
-          transform: translateX(700px);
-        }
+        //@media (min-width: 1200px) {
+        //  transform: translateX(700px);
+        //}
       }
     }
 

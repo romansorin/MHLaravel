@@ -3947,6 +3947,16 @@
   color: #3a3a3a;
 }
 
+.page-wrap .col-10 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-wrap .col-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .page-wrap .page-heading {
   font-weight: 700;
   font-size: 40px;
@@ -3956,6 +3966,20 @@
   color: #6f6f6f;
   font-weight: 400;
   font-size: 16px;
+}
+
+.page-wrap .page-subheading-extend {
+  display: none;
+  background-color: transparent;
+  border: solid 1px #3a3a3a;
+  border-radius: 14px;
+  padding: 5px 15px 5px 15px;
+  font-size: 16px;
+}
+
+.page-wrap .page-subheading-extend:hover {
+  background-color: #3a3a3a;
+  color: #ffffff;
 }
 
 .main-content-wrap #news-cards-wrapper {
@@ -3998,13 +4022,6 @@
 
 .main-content-wrap #calendar-cards-wrapper .glider-contain .col-12 {
   flex: 0 0 40%;
-}
-
-@media (min-width: 1200px) {
-  .main-content-wrap #calendar-cards-wrapper .glider-contain .glider-track {
-    -webkit-transform: translateX(700px);
-            transform: translateX(700px);
-  }
 }
 
 .main-content-wrap #calendar-cards-wrapper .row {
@@ -27894,7 +27911,7 @@ a.text-dark:focus {
 .card-calendar {
   flex-direction: column;
   border-radius: 10px;
-  color: #222222;
+  background-color: #222222;
   width: 400px;
   height: 500px;
 }
@@ -27913,7 +27930,7 @@ a.text-dark:focus {
 }
 
 .card-calendar .card-calendar-date .card-calendar-month {
-  margin-bottom: 10;
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: 400;
 }
@@ -27923,6 +27940,7 @@ a.text-dark:focus {
 }
 
 .card-calendar .card-calendar-info .card-calendar-title {
+  letter-spacing: 0.7px;
   font-weight: 600;
   font-size: 28px;
 }
@@ -27930,6 +27948,12 @@ a.text-dark:focus {
 .card-calendar .card-calendar-info .card-calendar-description {
   font-size: 24px;
   font-weight: 400;
+}
+
+.card-calendar .card-calendar-image {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 200px;
 }
 
 #one {

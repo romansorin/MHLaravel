@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Laravel App')</title>
+    <title>@yield('title', 'Mentor High School')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!-- TODO: need icons for search, menu, etc. that i like -->
     @yield('stylesheets')

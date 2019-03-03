@@ -104,7 +104,7 @@
   @extend %card;
   flex-direction: column;
   border-radius: 10px;
-  color: #222222;
+  background-color: #222222;
   width: 400px;
   height: 500px;
 
@@ -113,6 +113,7 @@
     width: 40px;
     flex-direction: column;
     border-bottom: 2px solid;
+
     .card-calendar-day {
       margin-bottom: 0;
       font-size: 28px;
@@ -120,7 +121,7 @@
     }
 
     .card-calendar-month {
-      margin-bottom: 10;
+      margin-bottom: 10px;
       font-size: 24px;
       font-weight: 400;
     }
@@ -128,8 +129,10 @@
 
   .card-calendar-info {
     flex-direction: column;
+
     .card-calendar-title {
       @extend %card-title;
+      letter-spacing: 0.7px;
       font-weight: 600;
       font-size: 28px;
     }
@@ -138,6 +141,12 @@
       font-size: 24px;
       font-weight: 400;
     }
+  }
+
+  .card-calendar-image {
+    background-color: $white;
+    border-radius: 10px;
+    height: 200px;
   }
 }
 

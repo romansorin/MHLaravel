@@ -1,6 +1,6 @@
 <?php
 use Carbon\Carbon;
-$date = Carbon::now()->format('l\, F dS');
+$date = Carbon::now()->format('l\, F jS');
 ?>
 <div id="search-wrapper">
     <div class="close-search">
