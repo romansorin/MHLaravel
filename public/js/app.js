@@ -1783,44 +1783,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CalendarCard",
   data: function data() {
     return {
-      posts: [{
+      events: [{
         id: 0,
         date: 24,
-        month: 'February',
-        title: "Title",
-        description: "In@#@#fo"
+        month: "March",
+        title: "Lorem ipsum dolor.",
+        description: "In@#@#fo",
+        image: "https://images.pexels.com/photos/868097/pexels-photo-868097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
       }, {
         id: 1,
         date: 25,
-        month: 'January',
-        title: "Title",
-        description: "In3434342fo"
+        month: "March",
+        title: "Lorem ipsum dolor.",
+        description: "In3434342fo",
+        image: "https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=adult-elderly-face-1933873.jpg&fm=jpg"
       }, {
         id: 2,
         date: 26,
-        month: 'February',
-        title: "Titsdasdle",
-        description: "Ifasfasfafnfo"
-      }, {
-        id: 3,
-        date: 27,
-        month: 'February',
-        title: "Tissssfagwegtle",
-        description: "Insdasdasdaafo"
-      }, {
-        id: 4,
-        date: 28,
-        month: 'February',
-        title: "Tiadatle",
-        description: "Inaaaasdsfo"
+        month: "March",
+        title: "Lorem ipsum dolor.",
+        description: "Ifasfasfafnfo",
+        image: "https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=adult-elderly-face-1933873.jpg&fm=jpg"
       }]
     };
   }
@@ -36803,52 +36790,37 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    _vm._l(_vm.posts, function(post) {
-      return _c("div", { staticClass: "glider-track" }, [
-        _c("div", { staticClass: "col-3" }, [
-          _c("article", { staticClass: "card-calendar" }, [
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "row card-calendar-date" }, [
-                _c("p", { staticClass: "card-calendar-day" }, [
-                  _vm._v(_vm._s(post.date))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-calendar-month" }, [
-                  _vm._v(_vm._s(post.month))
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row card-calendar-info" }, [
-                _c("h3", { staticClass: "card-calendar-title" }, [
-                  _vm._v(_vm._s(post.title))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-calendar-description" }, [
-                  _vm._v(_vm._s(post.description))
-                ])
-              ]),
-              _vm._v(" "),
-              _vm._m(0, true)
-            ])
+  return _c("div", [
+    _c("article", { staticClass: "card-calendar" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row card-calendar-date" }, [
+          _c("p", { staticClass: "card-calendar-day" }, [
+            _vm._v(_vm._s(_vm.events[0].date))
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-calendar-month" }, [
+            _vm._v(_vm._s(_vm.events[0].month))
           ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row card-calendar-info" }, [
+          _c("h3", { staticClass: "card-calendar-title" }, [
+            _vm._v(_vm._s(_vm.events[0].title))
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-calendar-description" }, [
+            _vm._v(_vm._s(_vm.events[0].description))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row card-calendar-image" }, [
+          _c("img", { attrs: { src: _vm.events[0].image, alt: "#" } })
         ])
       ])
-    }),
-    0
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row card-calendar-image" }, [
-      _c("img", { attrs: { src: "#", alt: "#a" } })
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49337,8 +49309,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/988244/Documents/MHLaravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/988244/Documents/MHLaravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Roman\Documents\MHLaravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Roman\Documents\MHLaravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

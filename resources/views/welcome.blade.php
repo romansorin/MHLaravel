@@ -65,17 +65,19 @@
         </div>
     </section>
 
-    <section class="main-content-wrap">
+    <section class="main-content-wrap container">
         <div class="row" id="calendar-cards-wrapper">
             <div class="col-12">
                 <div class="row">
-                    <div class="glider-contain">
-                        <div class="glider" id="calendar-glider">
-                            {{--TODO: move this into the component--}}
-                            <card-calendar></card-calendar>
-                        </div>
+                    <div class="col-lg-4">
+                        <card-calendar></card-calendar>   
+                    </div>    
+                    <div class="col-lg-4">
+                        <card-calendar></card-calendar>   
                     </div>
-                    <div role="tablist" class="dots"></div>
+                    <div class="col-lg-4">
+                        <card-calendar></card-calendar>       
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,20 +88,11 @@
     <script src="{{ asset('js/glider.min.js') }}"></script>
     <script>
         new Glider(document.querySelector('#news-glider'), {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 'auto',
+            slidesToScroll: 'auto',
             addTrack: false,
             duration: 2,
-            draggable: true,
-        });
-        new Glider(document.querySelector('#calendar-glider'), {
-            slidesToScroll: 3,
-            slidesToShow: 3,
-            dragVelocity: 1.5,
-            addTrack: false,
-            duration: 2,
-            draggable: true,
-            dots: '.dots',
+            draggable: true
         });
     </script>
 @endsection
