@@ -1,4 +1,4 @@
-@extends('layouts/app')
+@extends('layouts.app')
 @section('title', 'Home')
 @section('stylesheets')
     <link rel="stylesheet" href="{{ asset('css/glider.min.css') }}">
@@ -13,7 +13,7 @@
                     <p class="page-subheading">The latest news and announcements from Mentor.</p>
                 </div>
                 <div class="col-2">
-                    <button class="btn btn-light page-subheading-extend">View latest</button>
+                    <a href="/campus-life/news"><button class="btn btn-light page-subheading-extend">View latest</button></a>
                 </div>
             </div>
         </div>
@@ -70,13 +70,13 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-lg-4">
-                        <card-calendar></card-calendar>   
+                        <card-calendar :calendar-data="{{ App\EventPost::find(1) }}"></card-calendar>
                     </div>    
                     <div class="col-lg-4">
-                        <card-calendar></card-calendar>   
+                        <card-calendar :calendar-data="{{ App\EventPost::find(2) }}"></card-calendar>
                     </div>
                     <div class="col-lg-4">
-                        <card-calendar></card-calendar>       
+                        <card-calendar :calendar-data="{{ App\EventPost::find(3) }}"></card-calendar>
                     </div>
                 </div>
             </div>
