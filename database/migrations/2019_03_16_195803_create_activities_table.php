@@ -18,6 +18,7 @@ class CreateActivitiesTable extends Migration {
             $table->string('image');
             $table->boolean('updated');
             $table->text('content');
+            $table->boolean('updated');
             $table->unsignedInteger('owner_id');
             $table->timestamps();
         });
