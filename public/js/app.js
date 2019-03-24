@@ -1826,17 +1826,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-var _data = [{
-  category: "VueJS",
-  title: "This is a title, where I am trying to learn VueJS."
-}];
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CardHorizontal",
-  data: function data() {
-    return {
-      data: _data
-    };
-  }
+  props: ['data']
 });
 
 /***/ }),
@@ -1866,17 +1858,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-var _data = [{
-  category: "Laravel",
-  title: "A vertical version of this card — all for testing."
-}];
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CardVertical",
-  data: function data() {
-    return {
-      data: _data
-    };
-  }
+  props: ['data']
 });
 
 /***/ }),
@@ -54405,7 +54389,9 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row card-calendar-image" }, [
-          _c("img", { attrs: { src: _vm.calendarData.image, alt: "#" } })
+          _c("a", { attrs: { href: "/events/" + _vm.calendarData.id } }, [
+            _c("img", { attrs: { src: _vm.calendarData.image, alt: "#" } })
+          ])
         ])
       ])
     ])
@@ -54438,36 +54424,31 @@ var render = function() {
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row card-horizontal-meta" }, [
           _c("p", { staticClass: "card-horizontal-category" }, [
-            _vm._v(_vm._s(_vm.data[0].category))
+            _vm._v(_vm._s(_vm.data.category))
           ]),
           _vm._v(" "),
           _c("h3", { staticClass: "card-horizontal-title" }, [
-            _vm._v(_vm._s(_vm.data[0].title))
+            _vm._v(_vm._s(_vm.data.title))
           ])
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "row card-horizontal-view" }, [
+          _c("a", { attrs: { href: "/news/" + _vm.data.id } }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-light card-horizontal-view-btn",
+                attrs: { type: "button" }
+              },
+              [_vm._v("View")]
+            )
+          ])
+        ])
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row card-horizontal-view" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-light card-horizontal-view-btn",
-          attrs: { type: "button" }
-        },
-        [_vm._v("View")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -54494,36 +54475,31 @@ var render = function() {
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row card-vertical-meta" }, [
           _c("p", { staticClass: "card-vertical-category" }, [
-            _vm._v(_vm._s(_vm.data[0].category))
+            _vm._v(_vm._s(_vm.data.category))
           ]),
           _vm._v(" "),
           _c("h3", { staticClass: "card-vertical-title" }, [
-            _vm._v(_vm._s(_vm.data[0].title))
+            _vm._v(_vm._s(_vm.data.title))
           ])
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "row card-vertical-view" }, [
+          _c("a", { attrs: { href: "/news/" + _vm.data.id } }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-light card-vertical-view-btn",
+                attrs: { type: "button" }
+              },
+              [_vm._v("View")]
+            )
+          ])
+        ])
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row card-vertical-view" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-light card-vertical-view-btn",
-          attrs: { type: "button" }
-        },
-        [_vm._v("View")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

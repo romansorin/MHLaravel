@@ -5,28 +5,28 @@ Route::get('/', function () {
 });
 
 Route::get('/campus-life', function () {
-   return view('campus.campus');
+    return view('campus.campus');
 });
 
 Route::get('/about', function () {
-   return view('about');
+    return view('about');
 });
 
 Route::get('/academics', function () {
-   return view('academics.academics');
+    return view('academics.academics');
 });
 
 Route::get('/the-arts', function () {
-   return view('the-arts.the-arts');
+    return view('the-arts.the-arts');
 });
 
 Route::get('/resources', function () {
-   return view('resources.resources');
+    return view('resources.resources');
 });
 
 Route::resource('news', 'NewsPostController');
 Route::resource('events', 'EventPostController');
-Route::resource('activities', 'ActivityController');
+Route::resource('campus-life/activities', 'ActivityController');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 

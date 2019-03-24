@@ -11,7 +11,7 @@
                     <p class="card-calendar-description">{{ calendarData.description }}</p>
                 </div>
                 <div class="row card-calendar-image">
-                    <img :src="calendarData.image" alt="#">
+                    <a :href="'/events/'+calendarData.id"><img :src="calendarData.image" alt="#"></a>
                 </div>
             </div>
         </article>
