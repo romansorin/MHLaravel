@@ -40,6 +40,7 @@ class ActivityController extends Controller
     {
         $attributes = request()->validate([
             'name' => [],
+            'advisor' => [],
             'image' => [],
             'content' => []
         ]);

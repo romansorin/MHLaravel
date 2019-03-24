@@ -15,9 +15,11 @@ class CreateActivitiesTable extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('name');
+            $table->string('advisor');
             $table->string('image');
             $table->text('content');
+            $table->boolean('updated');
             $table->unsignedInteger('owner_id');
             $table->timestamps();
         });

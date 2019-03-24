@@ -66900,8 +66900,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Roman\Documents\MHLaravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Roman\Documents\MHLaravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/988244/Documents/MHLaravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/988244/Documents/MHLaravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
