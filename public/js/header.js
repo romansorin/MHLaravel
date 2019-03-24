@@ -4,6 +4,7 @@ let nav = document.querySelector('.nav-wrapper');
 let menu = document.getElementById('menu');
 let search = document.getElementById('search-wrapper');
 let closeSearchBtn = document.querySelector('.close-search');
+let body = document.querySelector('body');
 
 let nav_array = Array.from(document.querySelectorAll(".nav-link"));
 let delays = ['first', 'second', 'third', 'fourth', 'fifth'];
@@ -31,6 +32,7 @@ function navToggle() {
     nav.classList.toggle('is-open');
 }
 
+
 function menuButtonToggle() {
     menuToggleBtn.classList.toggle('is-active');
 }
@@ -49,6 +51,7 @@ function elementContainsAnimated(element) {
 
 menuToggleBtn.addEventListener('click', () => {
     if (menuIsOpen()) {
+
         if (elementContainsAnimated(menu)) {
             replaceInToOut(menu);
             menuButtonToggle();
@@ -66,6 +69,7 @@ menuToggleBtn.addEventListener('click', () => {
         assignNavLinkDelays();
         menuButtonToggle();
         navToggle();
+
         menuToggle();
     }
 
@@ -80,6 +84,7 @@ openSearchBtn.addEventListener('click', () => {
         addAnimation(search, 'fadeIn');
     search.style.display = 'block';
 
+
 });
 // Close the search wrapper
 closeSearchBtn.addEventListener('click', () => {
@@ -88,4 +93,5 @@ closeSearchBtn.addEventListener('click', () => {
         search.style.display = 'none';
     }, 500);
     navToggle();
+
 });

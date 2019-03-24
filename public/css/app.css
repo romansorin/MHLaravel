@@ -15957,6 +15957,16 @@ a.text-dark:focus {
   padding-right: 0;
 }
 
+.main-content-wrap #calendar-cards-wrapper .col-xl-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main-content-wrap #calendar-cards-wrapper .col-lg-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .main-content-wrap #calendar-cards-wrapper .glider-track {
   width: 100% !important;
 }
@@ -39881,16 +39891,20 @@ a.text-dark:focus {
   flex-direction: column;
   border-radius: 10px;
   color: #222222;
-  padding-top: 10px;
-  margin-left: 0;
   width: 340px;
-  height: 500px;
+  height: 550px;
 }
 
 @media (max-width: 1199.98px) {
   .card-calendar {
-    height: 500px !important;
     width: 340px !important;
+    height: 550px !important;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .card-calendar {
+    width: 295px !important;
   }
 }
 
@@ -39924,11 +39938,12 @@ a.text-dark:focus {
   line-height: 1;
   font-weight: 600;
   margin-bottom: 20px;
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .card-calendar .card-calendar-info .card-calendar-description {
-  font-size: 22px;
+  font-size: 20px;
+  line-height: 1.1;
   font-weight: 400;
 }
 
@@ -39942,12 +39957,20 @@ a.text-dark:focus {
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.18);
 }
 
+@media (max-width: 575.98px) {
+  .card-calendar .card-calendar-image {
+    width: 255px !important;
+  }
+}
+
+.card-calendar .card-calendar-image a,
 .card-calendar .card-calendar-image img {
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 #one {

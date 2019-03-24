@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Activity;
 
-class ActivityController extends Controller
-{
+class ActivityController extends Controller {
     public function __construct() {
         $this->middleware('auth')->except(['show', 'index']);
     }
@@ -14,11 +13,11 @@ class ActivityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $activities = Activity::all();
+    public function index() {
+        $updated = Activity::where('updated', true)->get();
+        $others  = Activity::where('updated', false)->get();
 
-        return view('campus.activities.index', compact('activities'));
+        return view('campus.activities.index', compact('updated', 'others'));
     }
 
     /**
@@ -26,8 +25,7 @@ class ActivityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         return view('campus.activities.create');
     }
 
@@ -36,13 +34,20 @@ class ActivityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store()
-    {
+    public function store() {
         $attributes = request()->validate([
-            'name' => [],
-            'image' => [],
-            'content' => []
+            'name'    => [],
+            'advisor' => [],
+            'updated' => [],
+            'image'   => [],
+            'content' => [],
         ]);
+
+        if (request()->has('updated')) {
+            $attributes['updated'] = 1;
+        } else {
+            $attributes['updated'] = 0;
+        }
 
         $attributes['owner_id'] = auth()->id();
 
@@ -57,8 +62,7 @@ class ActivityController extends Controller
      * @param  \App\Activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function show(Activity $activity)
-    {
+    public function show(Activity $activity) {
         return view('campus.activities.show', compact('activity'));
     }
 
@@ -68,8 +72,7 @@ class ActivityController extends Controller
      * @param  \App\Activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function edit(Activity $activity)
-    {
+    public function edit(Activity $activity) {
         return view('campus.activities.edit', compact('activity'));
     }
 
@@ -78,18 +81,22 @@ class ActivityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function update(Activity $activity)
-    {
-        $activity->update(request(['name', 'image', 'content']));
+    public function update(Activity $activity) {
+        if (request()->has('updated')) {
+            $activity->updated = 1;
+        } else {
+            $activity->updated = 0;
+        }
+
+        $activity->update(request(['name', 'image', 'advisor', 'content']), ['updated' => $activity->updated]);
         return redirect('/campus-life/activities');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     */
-    public function destroy(Activity $activity)
-    {
+/**
+ * Remove the specified resource from storage.
+ *
+ */
+    public function destroy(Activity $activity) {
         $activity->delete();
 
         return redirect('/campus-life/activities');
