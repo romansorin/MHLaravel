@@ -6,6 +6,7 @@
 @section('content')
 @php
 $news = App\NewsPost::orderBy('id', 'desc')->take(6)->get();
+// TODO: Events query based on: today's date -> future dates (don't show previous events) 
 $events = App\EventPost::orderBy('id', 'desk')->take(3)->get();
 @endphp
     <section class="page-wrap container">
@@ -15,8 +16,9 @@ $events = App\EventPost::orderBy('id', 'desk')->take(3)->get();
                     <h1 class="page-heading">News.</h1>
                     <p class="page-subheading">The latest news and announcements from Mentor.</p>
                 </div>
+                {{-- TODO: View latest, goes to news --}}
                 <div class="col-2">
-                    <a href="/campus-life/news"><button class="btn btn-light page-subheading-extend">View latest</button></a>
+                    <a href="/news"><button class="btn btn-light page-subheading-extend">View latest</button></a>
                 </div>
             </div>
         </div>
@@ -66,6 +68,7 @@ $events = App\EventPost::orderBy('id', 'desk')->take(3)->get();
             <h1 class="page-heading">Events.</h1>
             <p class="page-subheading">See what's happening in and around Mentor.</p>
         </div>
+        {{-- TODO: View all, goes to events --}}
     </section>
 
     <section class="main-content-wrap container">

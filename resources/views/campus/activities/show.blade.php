@@ -14,7 +14,7 @@
         <img src="{{ $activity->image }}" alt="{{ $activity->name }}">
         <p class="content">{{ $activity->content }}</p>
         @if(Auth::check())
-            <p><a href="/campus-life/activities/{{ $activity->id }}/edit">Edit</a></p>
+            <p><a href="/campus-life/activities/{{ $activity->name }}/edit">Edit</a></p>
         @endif
     </section>
 @endsection
