@@ -13,8 +13,8 @@
         <label class="label" for="category">Category</label>
         <input type="text" class="input" name="category" placeholder="Category">
 
-        <label class="label" for="published_on">Publish on:</label>
-        <input type="date" class="input" name="published_on" placeholder="mm/dd/yyyy">
+        <label class="label" for="publish_on">Publish on:</label>
+        <input type="date" class="input" name="publish_on" placeholder="mm/dd/yyyy">
 
         <label class="label" for="content">Content</label>
         <textarea name="content" class="textarea"></textarea>

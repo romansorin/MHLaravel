@@ -18,6 +18,7 @@ $events = App\EventPost::orderBy('id', 'desc')->take(3)->get();
                     <h1 class="page-heading">News.</h1>
                     <p class="page-subheading">The latest news and announcements from Mentor.</p>
                 </div>
+                {{-- TODO: View latest, goes to news --}}
                 <div class="col-2">
                     <h3 class="page-subheading-extend"><a href="/news">View latest</button></a></h3>
                 </div>
@@ -77,6 +78,7 @@ $events = App\EventPost::orderBy('id', 'desc')->take(3)->get();
                     <h3 class="page-subheading-extend"><a href="/events">View all</button></a></h3>
                 </div></div></div>
         </div>
+        {{-- TODO: View all, goes to events --}}
     </section>
 
     <section class="main-content-wrap container">

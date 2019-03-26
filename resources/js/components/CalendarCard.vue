@@ -11,6 +11,7 @@
                     <p class="card-calendar-description">{{ calendarData.description }}</p>
                 </div>
                 <div class="row card-calendar-image">
+                    <!-- TODO: little zoom in effect on image hover, see Stanford and Tubik as examples -->
                     <a :href="'/events/'+calendarData.id"><img :src="calendarData.image" alt="#"></a>
                 </div>
             </div>

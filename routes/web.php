@@ -27,6 +27,9 @@ Route::get('/resources', function () {
 Route::resource('news', 'NewsPostController');
 Route::resource('events', 'EventPostController');
 Route::resource('campus-life/activities', 'ActivityController');
+// TODO: using these routes for when name instead of ID in URL is implemented.
+// @see ActivityController::show();
+// Route::get('campus-life/activities/{name}', 'ActivityController@show');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
