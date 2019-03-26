@@ -32,5 +32,5 @@
                 return moment(date, 'YYYY-MM-DD').format('MMMM')
             }
         }
-    };
+    }
 </script>

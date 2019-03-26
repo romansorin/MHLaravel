@@ -15873,17 +15873,9 @@ a.text-dark:focus {
 }
 
 .page-wrap .page-subheading-extend {
-  display: none;
-  background-color: transparent;
-  border: solid 1px #3a3a3a;
-  border-radius: 14px;
-  padding: 5px 15px 5px 15px;
-  font-size: 16px;
-}
-
-.page-wrap .page-subheading-extend:hover {
-  background-color: #3a3a3a;
-  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
 .main-content-wrap #news-cards-wrapper {

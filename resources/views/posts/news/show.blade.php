@@ -12,7 +12,8 @@
                         <p class="category">{{ $news->category }}</p>
                     </div>
                     <div class="col-lg-12 col-md-12">
-                        <p class="date">Published on {{ $news->published_on }}</p>
+                        {{-- TODO: Convert this to an actual date instead of YYYY-MM-DD format --}}
+                        <p class="date">Published on {{ $news->publish_on }}</p>
                     </div>
                 </div>
 

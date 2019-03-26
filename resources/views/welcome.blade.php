@@ -5,8 +5,11 @@
 @endsection
 @section('content')
 @php
+// TODO: News posts should be scheduled to go out on a certain date, and private otherwise. The "publish on" field should be used for displaying news on a future date
 $news = App\NewsPost::orderBy('id', 'desc')->take(6)->get();
-$events = App\EventPost::orderBy('id', 'desk')->take(3)->get();
+// TODO: Events query based on: today's date -> future dates (don't show previous events) 
+$events = App\EventPost::orderBy('id', 'desc')->take(3)->get();
+//->whereDate('event_date', '>=', Carbon\Carbon::today())
 @endphp
     <section class="page-wrap container">
         <div class="col-12">
@@ -16,7 +19,7 @@ $events = App\EventPost::orderBy('id', 'desk')->take(3)->get();
                     <p class="page-subheading">The latest news and announcements from Mentor.</p>
                 </div>
                 <div class="col-2">
-                    <a href="/campus-life/news"><button class="btn btn-light page-subheading-extend">View latest</button></a>
+                    <h3 class="page-subheading-extend"><a href="/news">View latest</button></a></h3>
                 </div>
             </div>
         </div>
@@ -62,9 +65,17 @@ $events = App\EventPost::orderBy('id', 'desk')->take(3)->get();
     </section>
 
     <section class="page-wrap container">
-        <div>
+         <div class="col-12">
+            <div class="row">
+            <div class="col-10">
+                
+           
             <h1 class="page-heading">Events.</h1>
             <p class="page-subheading">See what's happening in and around Mentor.</p>
+             </div>
+            <div class="col-2">
+                    <h3 class="page-subheading-extend"><a href="/events">View all</button></a></h3>
+                </div></div></div>
         </div>
     </section>
 
@@ -72,6 +83,7 @@ $events = App\EventPost::orderBy('id', 'desk')->take(3)->get();
         <div class="row" id="calendar-cards-wrapper">
             <div class="col-12">
                 <div class="row">
+                    {{--  TODO: little zoom in effect on image hover, see Stanford and Tubik as examples --}}
                     <div class="col-xl-4 col-lg-6">
                         <card-calendar :calendar-data="{{ $events[2] }}"></card-calendar>
                     </div>    
