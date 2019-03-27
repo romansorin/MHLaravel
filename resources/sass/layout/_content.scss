@@ -28,19 +28,11 @@
   }
 
   .page-subheading-extend {
-    display: none;
-    background-color: transparent;
-    border: solid 1px $body-black;
-    border-radius: 14px;
-    padding: 5px 15px 5px 15px;
-    font-size: 16px;
-
-    &:hover {
-      background-color: $body-black;
-      color: $white;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
     }
   }
-}
 
 .main-content-wrap {
 
@@ -153,4 +145,10 @@
     text-align: left;
     letter-spacing: normal;
   }
+}
+
+.border {
+  width: 76px;
+  height: 1px;
+  border: 1px solid;
 }

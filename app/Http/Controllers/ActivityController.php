@@ -36,11 +36,11 @@ class ActivityController extends Controller {
      */
     public function store() {
         $attributes = request()->validate([
-            'name'    => [],
-            'advisor' => [],
+            'name'    => ['required', 'string', 'max:255', 'unique:activities'],
+            'advisor' => ['string', 'max:255'],
             'updated' => [],
-            'image'   => [],
-            'content' => [],
+            'image'   => ['required', 'string'],
+            'content' => ['required'],
         ]);
 
         if (request()->has('updated')) {
@@ -63,6 +63,9 @@ class ActivityController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show(Activity $activity) {
+        // TODO: something like this to use name in URL instead of the ID.
+        // public function show($name) { (instead of (Activity $activity))
+        //  - $activity = Activity::where('name', $name)->first();
         return view('campus.activities.show', compact('activity'));
     }
 

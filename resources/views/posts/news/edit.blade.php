@@ -16,8 +16,8 @@
         <label class="label" for="content">Content</label>
         <textarea name="content" class="textarea">{{ $news->content }}</textarea>
 
-        <label class="label" for="published_on">Publish on:</label>
-        <input type="date" class="input" name="published_on" placeholder="{{ $news->published_on }}">
+        <label class="label" for="publish_on">Publish on:</label>
+        <input type="date" class="input" name="publish_on" placeholder="mm/dd/yyyy" value="{{ $news->published_on }}">
 
         <button type="submit" class="button">Update post</button>
     </form>

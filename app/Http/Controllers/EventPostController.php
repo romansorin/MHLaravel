@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\EventPost;
 
-class EventPostController extends Controller
-{
+class EventPostController extends Controller {
     public function __construct() {
         $this->middleware('auth')->except(['show', 'index']);
     }
@@ -14,8 +13,7 @@ class EventPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         $events = EventPost::all();
 
         return view('posts.events.index', compact('events'));
@@ -26,8 +24,7 @@ class EventPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         return view('posts.events.create');
     }
 
@@ -36,13 +33,12 @@ class EventPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store()
-    {
+    public function store() {
         $attributes = request()->validate([
-           'title' => [],
-           'description' => [],
-           'image' => [],
-           'event_date' => []
+            'title'       => ['required', 'string', 'max:40'],
+            'description' => ['required', 'string'],
+            'image'       => ['required', 'string'],
+            'event_date'  => ['nullable|date'],
         ]);
 
         $attributes['owner_id'] = auth()->id();
@@ -58,9 +54,8 @@ class EventPostController extends Controller
      * @param  \App\EventPost  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(EventPost $event)
-    {
-        return view('posts.events.show', compact( 'event'));
+    public function show(EventPost $event) {
+        return view('posts.events.show', compact('event'));
     }
 
     /**
@@ -69,8 +64,7 @@ class EventPostController extends Controller
      * @param  \App\EventPost  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(EventPost $event)
-    {
+    public function edit(EventPost $event) {
         return view('posts.events.edit', compact('event'));
     }
 
@@ -80,9 +74,8 @@ class EventPostController extends Controller
      * @param  \App\EventPost  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(EventPost $event)
-    {
-        $event->update(request(['title', 'description' ,'image', 'event_date']));
+    public function update(EventPost $event) {
+        $event->update(request(['title', 'description', 'image', 'event_date']));
         return redirect('/events');
     }
 
@@ -90,8 +83,7 @@ class EventPostController extends Controller
      * Remove the specified resource from storage.
      *
      */
-    public function destroy(EventPost $event)
-    {
+    public function destroy(EventPost $event) {
         $event->delete();
 
         return redirect('/events');

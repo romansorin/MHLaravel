@@ -1,0 +1,41 @@
+.activity-index {
+	.heading {
+		font-size: 56px;
+		width: 100%;
+	}
+	.subheading {
+		color: $body-black;
+		font-size: 19px;
+		line-height: 1.5;
+	}
+	.section-heading {
+		font-size: 31px;
+		margin-bottom: 0;
+	}
+	.border {
+		margin: 20px 0px 25px 0px;
+		border-color: $theme-red !important;
+	}
+	.list-group-horizontal {
+		column-count: 2;
+		@include media-breakpoint-down(xs) {
+			column-count: 1;
+		}
+	}
+	.list-group {
+		padding: 0;
+		.list-group-item, a {
+			padding: 0;
+			color: $body-black;
+			font-size: 17px;
+			font-weight: 400;
+			line-height: 2;
+			cursor: pointer;
+			transition: .05s ease-in;
+			&:hover {
+				text-decoration: none;
+				color: #4C32FF;
+			}
+		}
+	}
+}

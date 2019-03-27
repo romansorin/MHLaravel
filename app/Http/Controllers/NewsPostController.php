@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\NewsPost;
 
-class NewsPostController extends Controller
-{
+class NewsPostController extends Controller {
     public function __construct() {
         $this->middleware('auth')->except(['show', 'index']);
     }
@@ -14,8 +13,7 @@ class NewsPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         $news = NewsPost::all();
 
         return view('posts.news.index', compact('news'));
@@ -26,8 +24,7 @@ class NewsPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         return view('posts.news.create');
     }
 
@@ -36,13 +33,12 @@ class NewsPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store()
-    {
+    public function store() {
         $attributes = request()->validate([
-           'title' => [],
-           'category' => [],
-           'content' => [],
-           'published_on' => []
+            'title'      => ['required', 'string', 'max:40'],
+            'category'   => ['required', 'string', 'max:25'],
+            'content'    => ['required', 'string'],
+            'publish_on' => ['nullable|date'],
         ]);
 
         $attributes['owner_id'] = auth()->id();
@@ -58,8 +54,7 @@ class NewsPostController extends Controller
      * @param  \App\NewsPost  $news
      * @return \Illuminate\Http\Response
      */
-    public function show(NewsPost $news)
-    {
+    public function show(NewsPost $news) {
         return view('posts.news.show', compact('news'));
     }
 
@@ -69,8 +64,7 @@ class NewsPostController extends Controller
      * @param  \App\NewsPost  $news
      * @return \Illuminate\Http\Response
      */
-    public function edit(NewsPost $news)
-    {
+    public function edit(NewsPost $news) {
         return view('posts.news.edit', compact('news'));
     }
 
@@ -80,9 +74,8 @@ class NewsPostController extends Controller
      * @param  \App\NewsPost  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(NewsPost $news)
-    {
-        $news->update(request(['title', 'category', 'content', 'published_on']));
+    public function update(NewsPost $news) {
+        $news->update(request(['title', 'category', 'content', 'publish_on']));
         return redirect('/news');
     }
 
@@ -90,8 +83,7 @@ class NewsPostController extends Controller
      * Remove the specified resource from storage.
      *
      */
-    public function destroy(NewsPost $news)
-    {
+    public function destroy(NewsPost $news) {
         $news->delete();
 
         return redirect('/news');
