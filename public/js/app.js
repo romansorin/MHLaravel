@@ -1789,7 +1789,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CalendarCard",
-  props: ['data'],
+  props: ['calendarData'],
   methods: {
     day: function day(date) {
       return moment__WEBPACK_IMPORTED_MODULE_0___default()(date, 'YYYY-MM-DD').format('DD');
@@ -54518,27 +54518,27 @@ var render = function() {
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row card-calendar-date" }, [
           _c("p", { staticClass: "card-calendar-day" }, [
-            _vm._v(_vm._s(_vm.day(_vm.data.event_date)))
+            _vm._v(_vm._s(_vm.day(_vm.calendarData.event_date)))
           ]),
           _vm._v(" "),
           _c("p", { staticClass: "card-calendar-month" }, [
-            _vm._v(_vm._s(_vm.month(_vm.data.event_date)))
+            _vm._v(_vm._s(_vm.month(_vm.calendarData.event_date)))
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row card-calendar-info" }, [
           _c("h3", { staticClass: "card-calendar-title" }, [
-            _vm._v(_vm._s(_vm.data.title))
+            _vm._v(_vm._s(_vm.calendarData.title))
           ]),
           _vm._v(" "),
           _c("p", { staticClass: "card-calendar-description" }, [
-            _vm._v(_vm._s(_vm.data.description))
+            _vm._v(_vm._s(_vm.calendarData.description))
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row card-calendar-image" }, [
-          _c("a", { attrs: { href: "/events/" + _vm.data.id } }, [
-            _c("img", { attrs: { src: _vm.data.image, alt: "#" } })
+          _c("a", { attrs: { href: "/events/" + _vm.calendarData.id } }, [
+            _c("img", { attrs: { src: _vm.calendarData.image, alt: "#" } })
           ])
         ])
       ])

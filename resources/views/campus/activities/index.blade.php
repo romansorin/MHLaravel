@@ -44,14 +44,15 @@
 <section class="activity-index main-content-wrap container">
     <div class="row">
         <div class="col-12 list-group-horizontal">
-    <ul class="list-group list-group-flush">
-    @foreach($others as $activity)
-    <a href="/campus-life/activities/{{ $activity->id }}">
-        <li class="list-group-item">- {{ $activity->name }}</li>
-    </a>
-    @endforeach
-    </ul>
-    </div></div>
+        <ul class="list-group list-group-flush">
+        @foreach($others as $activity)
+            <a href="/campus-life/activities/{{ $activity->id }}">
+                <li class="list-group-item">- {{ $activity->name }}</li>
+            </a>
+        @endforeach
+        </ul>
+        </div>
+    </div>
 </section>
 
 @if(Auth::check())
