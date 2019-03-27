@@ -19,9 +19,9 @@ $events = App\EventPost::orderBy('id', 'desc')->take(3)->get();
                     <p class="page-subheading">The latest news and announcements from Mentor.</p>
                 </div>
                 {{-- TODO: View latest, goes to news --}}
-                <div class="col-2">
-                    <h3 class="page-subheading-extend"><a href="/news">View latest</button></a></h3>
-                </div>
+                {{-- <div class="col-2">
+                    <h3 class="page-subheading-extend"><a href="/news">View latest></a></h3>
+                </div> --}}
             </div>
         </div>
     </section>
@@ -68,15 +68,15 @@ $events = App\EventPost::orderBy('id', 'desc')->take(3)->get();
     <section class="page-wrap container">
          <div class="col-12">
             <div class="row">
-            <div class="col-10">
-                
-           
-            <h1 class="page-heading">Events.</h1>
-            <p class="page-subheading">See what's happening in and around Mentor.</p>
-             </div>
-            <div class="col-2">
-                    <h3 class="page-subheading-extend"><a href="/events">View all</button></a></h3>
-                </div></div></div>
+                <div class="col-10">
+                <h1 class="page-heading">Events.</h1>
+                <p class="page-subheading">See what's happening in and around Mentor.</p>
+                 </div>
+                {{-- <div class="col-2">
+                    <h3 class="page-subheading-extend"><a href="/events">View all</a>
+                    </h3>
+                </div> --}}
+            </div>
         </div>
         {{-- TODO: View all, goes to events --}}
     </section>
@@ -87,13 +87,13 @@ $events = App\EventPost::orderBy('id', 'desc')->take(3)->get();
                 <div class="row">
                     {{--  TODO: little zoom in effect on image hover, see Stanford and Tubik as examples --}}
                     <div class="col-xl-4 col-lg-6">
-                        <card-calendar :calendar-data="{{ $events[2] }}"></card-calendar>
+                        <card-calendar :data="{{ $events[2] }}"></card-calendar>
                     </div>    
                     <div class="col-xl-4 col-lg-6">
-                        <card-calendar :calendar-data="{{ $events[1] }}"></card-calendar>
+                        <card-calendar :data="{{ $events[1] }}"></card-calendar>
                     </div>
                     <div class="col-xl-4 col-lg-6">
-                        <card-calendar :calendar-data="{{ $events[0] }}"></card-calendar>
+                        <card-calendar :data="{{ $events[0] }}"></card-calendar>
                     </div>
                 </div>
             </div>
