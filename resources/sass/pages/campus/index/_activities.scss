@@ -24,7 +24,7 @@
 	}
 	.list-group {
 		padding: 0;
-		height: 100%;
+		display: block;
 		.list-group-item, a {
 			padding: 0;
 			color: $body-black;
