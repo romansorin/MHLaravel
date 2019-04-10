@@ -62,10 +62,9 @@ class ActivityController extends Controller {
      * @param  \App\Activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function show(Activity $activity) {
-        // TODO: something like this to use name in URL instead of the ID.
-        // public function show($name) { (instead of (Activity $activity))
-        //  - $activity = Activity::where('name', $name)->first();
+    public function show($name) {
+        $activity = Activity::where('name', $name)->first(); 
+        // should i use ->get() here instead?
         return view('campus.activities.show', compact('activity'));
     }
 
@@ -75,7 +74,9 @@ class ActivityController extends Controller {
      * @param  \App\Activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function edit(Activity $activity) {
+    public function edit($name) {
+        $activity = Activity::where('name', $name)->first();
+        
         return view('campus.activities.edit', compact('activity'));
     }
 

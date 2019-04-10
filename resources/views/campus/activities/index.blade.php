@@ -24,7 +24,7 @@
         <div class="col-12 list-group-horizontal">
         <ul class="list-group list-group-flush">
         @foreach($updated as $activity)
-            <a href="/campus-life/activities/{{ $activity->id }}">
+            <a href="/campus-life/activities/{{ $activity->name }}">
                 <li class="list-group-item">- {{ $activity->name }}</li>
             </a>
         @endforeach
@@ -46,7 +46,7 @@
         <div class="col-12 list-group-horizontal">
         <ul class="list-group list-group-flush">
         @foreach($others as $activity)
-            <a href="/campus-life/activities/{{ $activity->id }}">
+            <a href="/campus-life/activities/{{ $activity->name }}">
                 <li class="list-group-item">- {{ $activity->name }}</li>
             </a>
         @endforeach
@@ -54,8 +54,4 @@
         </div>
     </div>
 </section>
-
-@if(Auth::check())
-        <p><a href="/campus-life/activities/create">Add an activity</a></p>
-@endif
 @endsection
