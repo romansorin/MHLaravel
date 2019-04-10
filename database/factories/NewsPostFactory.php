@@ -8,6 +8,7 @@ $factory->define(App\NewsPost::class, function (Faker $faker) {
         'category'   => $faker->word(),
         'content'    => $faker->text(),
         'publish_on' => $faker->date(),
+        'image'      => $faker->imageURL(),
         'owner_id'   => $faker->randomDigitNotNull(),
     ];
 });

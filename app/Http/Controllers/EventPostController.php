@@ -38,7 +38,7 @@ class EventPostController extends Controller {
             'title'       => ['required', 'string', 'max:40'],
             'description' => ['required', 'string'],
             'image'       => ['required', 'string'],
-            'event_date'  => ['nullable|date'],
+            'event_date'  => ['date'],
         ]);
 
         $attributes['owner_id'] = auth()->id();

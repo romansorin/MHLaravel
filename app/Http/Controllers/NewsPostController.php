@@ -38,7 +38,7 @@ class NewsPostController extends Controller {
             'title'      => ['required', 'string', 'max:40'],
             'category'   => ['required', 'string', 'max:25'],
             'content'    => ['required', 'string'],
-            'publish_on' => ['nullable|date'],
+            'publish_on' => ['date'],
         ]);
 
         $attributes['owner_id'] = auth()->id();

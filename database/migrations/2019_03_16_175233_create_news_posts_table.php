@@ -16,6 +16,7 @@ class CreateNewsPostsTable extends Migration {
             $table->string('title');
             $table->string('category');
             $table->text('content');
+            $table->string('image');
             $table->date('publish_on');
             $table->unsignedInteger('owner_id');
             $table->timestamps();
