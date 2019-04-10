@@ -7,7 +7,7 @@
                         <h3 class="card-horizontal-title">{{ data.title }}</h3>
                 </div>
                 <div class="row card-horizontal-view">
-                    <a :href="'/news/' + data.id"><button type="button" class="btn btn-light card-horizontal-view-btn">View</button></a>
+                    <a :href="'/news/' + data.title"><button type="button" class="btn btn-light card-horizontal-view-btn">View</button></a>
                 </div>
             </div>
         </article>
