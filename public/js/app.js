@@ -54581,7 +54581,7 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row card-horizontal-view" }, [
-          _c("a", { attrs: { href: "/news/" + _vm.data.title } }, [
+          _c("a", { attrs: { href: "/news/" + _vm.data.id } }, [
             _c(
               "button",
               {
@@ -54632,7 +54632,7 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row card-vertical-view" }, [
-          _c("a", { attrs: { href: "/news/" + _vm.data.title } }, [
+          _c("a", { attrs: { href: "/news/" + _vm.data.id } }, [
             _c(
               "button",
               {
