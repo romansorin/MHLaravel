@@ -9,7 +9,7 @@
 // TODO: News posts should be scheduled to go out on a certain date, and private otherwise. The "publish on" field should be used for displaying news on a future date
 $news = App\NewsPost::orderBy('id', 'desc')->take(6)->get();
 // TODO: Events query based on: today's date -> future dates (don't show previous events) 
-$events = App\EventPost::orderBy('event_date', 'desc')->whereDate('event_date', '>=', Carbon\Carbon::today())->take(3)->get();
+$events = App\EventPost::orderBy('event_date', 'desc')->take(3)->get();
 
 @endphp
     <section class="page-wrap container">
